@@ -23,15 +23,15 @@ export default function Web3Connect({ color = 'gray', size = 'sm', className = '
     </div>
   ) : (
     <Button
-      id="connect-wallet"
-      onClick={toggleWalletModal}
+      //id="connect-wallet"
+      //onClick={toggleWalletModal}
       variant="outlined"
       color={color}
       className={className}
       size={size}
       {...rest}
     >
-      {i18n._(t`Connect to a wallet`)}
+      {i18n._(t`Available Soon`)}
     </Button>
   )
 }
