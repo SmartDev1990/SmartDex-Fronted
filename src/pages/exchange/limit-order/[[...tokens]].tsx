@@ -383,14 +383,14 @@ function LimitOrder() {
             <div className="flex flex-col gap-3">
               <Alert
                 type="information"
-                title="Upgrade Notice"
+                title="Upcoming Features"
                 message={
-                  'In order to incorporate more community filler bots the ability to add new limit orders is temporarily paused. Existing orders are unaffected and can be edited and cancelled at any time'
+                  'The Limit order is new main features on smartdex'
                 }
                 dismissable={false}
               />
               <Button disabled={true} color={'gray'}>
-                {i18n._(t`Limit Orders Disabled`)}
+                {i18n._(t`Coming Soon`)}
               </Button>
               {/*<LimitOrderButton color="gradient" className="font-bold" currency={currencies[Field.INPUT]} />*/}
             </div>
