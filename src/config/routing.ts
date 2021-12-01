@@ -215,7 +215,6 @@ export const COMMON_BASES: ChainTokenList = {
     MATIC.DAI,
     MATIC.WETH,
     MATIC.USDT,
-    SUSHI[ChainId.MATIC],
   ],
   [ChainId.FANTOM]: [
     ...WRAPPED_NATIVE_ONLY[ChainId.FANTOM],
@@ -223,7 +222,6 @@ export const COMMON_BASES: ChainTokenList = {
     FANTOM.USDC,
     FANTOM.WBTC,
     FANTOM.WETH,
-    SUSHI[ChainId.FANTOM],
   ],
   [ChainId.BSC]: [
     ...WRAPPED_NATIVE_ONLY[ChainId.BSC],
@@ -233,7 +231,6 @@ export const COMMON_BASES: ChainTokenList = {
     BSC.USDT,
     BSC.BTCB,
     BSC.WETH,
-    SUSHI[ChainId.BSC],
   ],
   [ChainId.ARBITRUM]: [...WRAPPED_NATIVE_ONLY[ChainId.ARBITRUM], ARBITRUM.WBTC, ARBITRUM.USDC],
   [ChainId.XDAI]: [
@@ -242,7 +239,6 @@ export const COMMON_BASES: ChainTokenList = {
     XDAI.USDT,
     XDAI.WBTC,
     XDAI.WETH,
-    SUSHI[ChainId.XDAI],
   ],
   [ChainId.AVALANCHE]: [
     ...WRAPPED_NATIVE_ONLY[ChainId.AVALANCHE],
