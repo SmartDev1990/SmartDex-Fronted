@@ -68,8 +68,8 @@ export function useSwapActionHandlers(): {
           field,
           currencyId: currency.isToken
             ? currency.address
-            : currency.isNative && currency.chainId !== ChainId.CELO
-            ? 'ETH'
+            : currency.isNative && currency.chainId !== ChainId.BSC
+            ? 'BNB'
             : '',
         })
       )
@@ -317,7 +317,7 @@ function parseCurrencyFromURLParameter(urlParam: any): string {
   if (typeof urlParam === 'string') {
     const valid = isAddress(urlParam)
     if (valid) return valid
-    if (urlParam.toUpperCase() === 'ETH') return 'ETH'
+    if (urlParam.toUpperCase() === 'BNB') return 'BNB'
   }
   return ''
 }
@@ -343,7 +343,7 @@ function validatedRecipient(recipient: any): string | null {
 export function queryParametersToSwapState(parsedQs: ParsedQs, chainId: ChainId = ChainId.MAINNET): SwapState {
   let inputCurrency = parseCurrencyFromURLParameter(parsedQs.inputCurrency)
   let outputCurrency = parseCurrencyFromURLParameter(parsedQs.outputCurrency)
-  const eth = chainId === ChainId.CELO ? WNATIVE_ADDRESS[chainId] : 'ETH'
+  const eth = chainId === ChainId.CELO ? WNATIVE_ADDRESS[chainId] : 'BNB'
   const sushi = SUSHI_ADDRESS[chainId]
   if (inputCurrency === '' && outputCurrency === '') {
     inputCurrency = eth
