@@ -228,9 +228,9 @@ export default function NetworkModal(): JSX.Element | null {
                 const params = SUPPORTED_NETWORKS[key]
                 cookie.set('chainId', key)
                 if (key === ChainId.BSC) {
-                  library?.send('wallet_switchEthereumChain', [{ chainId: '0x38' }, account])
+                  library?.send('wallet_switchBinanceSmartChain', [{ chainId: '56' }, account])
                 } else {
-                  library?.send('wallet_addEthereumChain', [params, account])
+                  library?.send('wallet_addBinanceSmartChainChain', [params, account])
                 }
               }}
               className="flex items-center w-full col-span-1 p-3 space-x-3 rounded cursor-pointer bg-dark-800 hover:bg-dark-700"
