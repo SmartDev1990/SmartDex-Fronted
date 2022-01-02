@@ -113,7 +113,7 @@ function AppBar(): JSX.Element {
 
                 <div className="fixed bottom-0 left-0 z-10 flex flex-row items-center justify-center w-full p-4 lg:w-auto bg-dark-1000 lg:relative lg:p-0 lg:bg-transparent">
                   <div className="flex items-center justify-between w-full space-x-2 sm:justify-end">
-                    {chainId && [ChainId.MAINNET].includes(chainId) && library && library.provider.isMetaMask && (
+                    {chainId && [ChainId.BSC].includes(chainId) && library && library.provider.isMetaMask && (
                       <>
                         <QuestionHelper text={i18n._(t`Add xSUSHI to your MetaMask wallet`)}>
                           <div
@@ -121,13 +121,13 @@ function AppBar(): JSX.Element {
                             onClick={() => {
                               if (library && library.provider.isMetaMask && library.provider.request) {
                                 const params: any = {
-                                  type: 'ERC20',
+                                  type: 'BSC',
                                   options: {
-                                    address: '0x8798249c2e607446efb7ad49ec89dd1865ff4272',
-                                    symbol: 'XSUSHI',
+                                    address: '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3',
+                                    symbol: 'DAI',
                                     decimals: 18,
                                     image:
-                                      'https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/ethereum/assets/0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272/logo.png',
+                                      'https://raw.githubusercontent.com/sushiswap/assets/master/blockchains/xdai/assets/0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d/logo.png,
                                   },
                                 }
                                 library.provider
