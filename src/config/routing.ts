@@ -195,8 +195,8 @@ export const ADDITIONAL_BASES: {
 export const CUSTOM_BASES: {
   [chainId: number]: { [tokenAddress: string]: Token[] }
 } = {
-  [ChainId.MAINNET]: {
-    [AMPL.address]: [DAI, WNATIVE[ChainId.MAINNET]],
+  [ChainId.BSC]: {
+    [ChainId.BSC]: [WNATIVE[ChainId.BSC]],
   },
   [ChainId.MATIC]: {
     [MATIC.TEL.address]: [MATIC.SUSHI, MATIC.AAVE],
@@ -207,7 +207,7 @@ export const CUSTOM_BASES: {
  * Shows up in the currency select for swap and add liquidity
  */
 export const COMMON_BASES: ChainTokenList = {
-  [ChainId.MAINNET]: [...WRAPPED_NATIVE_ONLY[ChainId.MAINNET], DAI, USDC, USDT, WBTC, SUSHI[ChainId.MAINNET]],
+  [ChainId.BSC]: [...WRAPPED_NATIVE_ONLY[ChainId.BSC], DAI, USDC, USDT, WBTC, SUSHI[ChainId.BSC]],
   [ChainId.MATIC]: [
     ...WRAPPED_NATIVE_ONLY[ChainId.MATIC],
     MATIC.USDC,
