@@ -8,7 +8,7 @@ import { queryParametersToSwapState } from './hooks'
 describe('hooks', () => {
   const sushiAddress = SUSHI_ADDRESS[ChainId.BSC]
   describe('#queryParametersToSwapState', () => {
-    test('ETH to DAI', () => {
+    test('BSC to DAI', () => {
       expect(
         queryParametersToSwapState(
           parse(
@@ -20,7 +20,7 @@ describe('hooks', () => {
         [Field.OUTPUT]: {
           currencyId: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
         },
-        [Field.INPUT]: { currencyId: 'BNB' },
+        [Field.INPUT]: { currencyId: 'BSC' },
         typedValue: '20.5',
         independentField: Field.OUTPUT,
         recipient: null,
@@ -36,7 +36,7 @@ describe('hooks', () => {
           })
         )
       ).toEqual({
-        [Field.INPUT]: { currencyId: 'ETH' },
+        [Field.INPUT]: { currencyId: 'BSC' },
         [Field.OUTPUT]: { currencyId: sushiAddress },
         typedValue: '',
         independentField: Field.INPUT,
@@ -53,7 +53,7 @@ describe('hooks', () => {
           })
         )
       ).toEqual({
-        [Field.OUTPUT]: { currencyId: 'ETH' },
+        [Field.OUTPUT]: { currencyId: 'BSC' },
         [Field.INPUT]: { currencyId: sushiAddress },
         typedValue: '20.5',
         independentField: Field.INPUT,
@@ -71,7 +71,7 @@ describe('hooks', () => {
         )
       ).toEqual({
         [Field.INPUT]: { currencyId: sushiAddress },
-        [Field.OUTPUT]: { currencyId: 'BNB' },
+        [Field.OUTPUT]: { currencyId: 'BSC' },
         typedValue: '20.5',
         independentField: Field.INPUT,
         recipient: null,
@@ -87,7 +87,7 @@ describe('hooks', () => {
           })
         )
       ).toEqual({
-        [Field.OUTPUT]: { currencyId: 'BNB' },
+        [Field.OUTPUT]: { currencyId: 'BSC' },
         [Field.INPUT]: { currencyId: sushiAddress },
         typedValue: '20.5',
         independentField: Field.INPUT,
@@ -103,7 +103,7 @@ describe('hooks', () => {
           })
         )
       ).toEqual({
-        [Field.OUTPUT]: { currencyId: 'BNB' },
+        [Field.OUTPUT]: { currencyId: 'BSC' },
         [Field.INPUT]: { currencyId: sushiAddress },
         typedValue: '20.5',
         independentField: Field.INPUT,

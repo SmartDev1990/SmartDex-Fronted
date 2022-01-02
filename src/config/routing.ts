@@ -216,7 +216,7 @@ export const COMMON_BASES: ChainTokenList = {
     MATIC.WETH,
     MATIC.USDT,
   ],
-  [ChainId.FANTOM]: [
+   [ChainId.FANTOM]: [
     ...WRAPPED_NATIVE_ONLY[ChainId.FANTOM],
     FANTOM.DAI,
     FANTOM.USDC,
